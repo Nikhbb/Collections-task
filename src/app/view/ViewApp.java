@@ -1,8 +1,9 @@
 package app.view;
 
-import app.model.User;
+import app.entity.User;
 
 import java.util.List;
+import java.util.Scanner;
 
 public class ViewApp {
     public void printMenu() {
@@ -25,5 +26,17 @@ public class ViewApp {
         } catch (IndexOutOfBoundsException ex) {
             System.out.println("You must enter an index from 1 to " + users.size());
         }
+    }
+
+    public int getMenuNumber() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Your choose: ");
+        return sc.nextInt();
+    }
+
+    public int getIndex() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Input index: ");
+        return sc.nextInt();
     }
 }
